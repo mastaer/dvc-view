@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dvc-view"
+version = "0.1.0"
+description = "This package can visualize Data Version Control (DVC) / Pipelines"
+authors = ["Jonas Annuscheit <jonas.annuscheit@htw-berlin.de>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+dvc = "*"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+dvc-cc = 'main:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
