@@ -13,6 +13,7 @@ dvc = "*"
 
 [tool.poetry.scripts]
 dvc-view = 'dvc_view.main:main'
+dvc-view-demoproject = 'dvc_view.demoproject:main'
 
 [build-system]
 requires = ["poetry>=0.12"]
