@@ -12,6 +12,8 @@ def create_fix_demo_stages(path):
     gitrepo = git.Repo.init()
     dvcrepo = dvc.repo.Repo.init()
 
+    # TODO: the first stage needs also a dependency !!!
+
     subprocess.call(['dvc', 'run', '-o', 'out1_1.txt', 'echo text>out1_1.txt'])
     subprocess.call(['dvc', 'run', '-d', 'out1_1.txt', '-o', 'out1_2.txt', 'echo text>out1_2.txt'])
     subprocess.call(['dvc', 'run', '--no-exec', '-d', 'out1_2.txt', '-o', 'out1_3.txt', 'echo text>out1_3.txt'])
